@@ -1,0 +1,89 @@
+<section id="contact">
+  <div class="container-lg">
+    <div class="text-center">
+      <p class="lead mt-3">
+        Questions to ask? Fill out the form to contact me directly...
+      </p>
+    </div>
+    <div class="row justify-content-center my-2">
+      <div class="col-lg-6">
+        <!-- Form designed with Bootstrap -->
+        <!-- Form Validation using Angular -->
+        <form [formGroup]="form">
+          <label for="email" class="form-label">Email address:</label>
+          <div class="form-group">
+            <div class="input-group mb-1">
+              <span class="input-group-text">
+                <i class="bi bi-envelope-fill text-secondary"></i>
+              </span>
+              <input
+                ngModel
+                email="true"
+                formControlName="email"
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="john@example.com"
+              />
+            </div>
+            <div
+              *ngIf="email!.touched && email!.invalid"
+              class="alert alert-danger"
+            >
+              Email is Required!
+            </div>
+          </div>
+
+          <label for="username" class="form-label">Name:</label>
+          <div class="mb-1 input-group form-group">
+            <span class="input-group-text">
+              <i class="bi bi-person-fill text-secondary"></i>
+            </span>
+            <input
+              formControlName="username"
+              type="text"
+              id="username"
+              class="form-control"
+              placeholder="John"
+            />
+          </div>
+          <div
+            *ngIf="username!.touched && username!.invalid"
+            class="alert alert-danger"
+          >
+            Name is Required!
+          </div>
+          <label for="subject" class="form-label"
+            >What is your question about?</label
+          >
+
+          <div class="mb-1 mt-1 form-floating">
+            <textarea
+              formControlName="query"
+              class="form-control"
+              id="query"
+              style="height: 140px"
+              placeholder="query"
+            ></textarea>
+          </div>
+          <div
+            *ngIf="query!.touched && query!.invalid"
+            class="alert alert-danger"
+          >
+            Please enter your query!
+          </div>
+          <div class="mb-1 text-center">
+            <button
+              [disabled]="!form.valid"
+              type="submit"
+              class="btn btn-success"
+              (click)="submitQuery()"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

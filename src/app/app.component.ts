@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'personal3';
+
+  hideNavBar(e: any){
+    console.log('test')
+    e.hide();
+  }
 }

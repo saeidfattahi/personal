@@ -1,0 +1,27 @@
+.youtube {
+  color: #ff0000;
+  font-size: 4rem;
+}
+.title {
+  font-family: sans-serif Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+.course {
+  font-size: 2.7rem;
+}
+.training-title {
+  font-size: 1.7rem;
+}
+.training-title i {
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 768px) {
+  .card:hover {
+    box-shadow: 4px 4px 4px #e0a800;
+    transform: scale(1.1);
+  }
+  .card {
+    transition: 0.3s;
+  }
+}

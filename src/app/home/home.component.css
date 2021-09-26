@@ -1,0 +1,5 @@
+.my-photo {
+  border-radius: 1%;
+  filter: grayscale(80%);
+  max-width: 17rem;
+}
